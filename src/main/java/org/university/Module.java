@@ -60,4 +60,15 @@ public class Module {
     public void setLecturer(Lecturer lecturer) {
         this.lecturer = lecturer;
     }
+
+    @Override
+    public String toString() {
+        return "Module{ \n" +
+                "   code='" + code + '\n' +
+                "   name='" + name + '\n' +
+                "   students=" + students + '\n' +
+                "   associated_courses=" + associated_courses + '\n'+
+                "   lecturer=" + lecturer + '\n' +
+                '}' + '\n';
+    }
 }

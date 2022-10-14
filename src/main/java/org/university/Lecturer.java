@@ -67,4 +67,16 @@ public class Lecturer {
     public void addModules(Module module){
         this.modules.add(module);
     }
+
+    @Override
+    public String toString() {
+        return "Lecturer{" +
+                "name='" + name + '\n' +
+                "   age=" + age + '\n' +
+                "   ID=" + ID + '\n' +
+                "   username='" + username + '\n' +
+                "   courses=" + courses + '\n' +
+                "   modules=" + modules + '\n' +
+                '}' + '\n';
+    }
 }

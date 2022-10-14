@@ -27,5 +27,5 @@ allprojects {
 }
 
 dependencies {
-    //implementation 'com.github.User:Repo:Tag'
+    implementation 'com.github.BobbyMartins:SoftEngIII:v1.0.0'
 }

@@ -69,4 +69,18 @@ public class Student {
     public void setModules(ArrayList<Module> modules) {
         this.modules = modules;
     }
+
+    @Override
+    public String toString() {
+        String ret = "";
+        ret += String.format("Student name: %s \n", this.Name);
+        ret += String.format("Student age: %d \n", this.Age);
+        ret += String.format("Student DOB: %s \n", this.DOB);
+        ret += String.format("Student ID: %d \n", this.ID);
+        ret += String.format("Student Username: %s \n", getUsername());
+        ret += String.format("Student Courses: %s \n", this.courses);
+        ret += String.format("Student Modules: %s \n", this.modules );
+
+        return ret;
+    }
 }

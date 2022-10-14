@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testClass" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-26T12:54:46" hostname="DESKTOP-10P96BM" time="0.07">
+<testsuite name="testClass" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-14T20:45:33" hostname="DESKTOP-10P96BM" time="0.025">
   <properties/>
-  <testcase name="testGet_Username()" classname="testClass" time="0.07"/>
+  <testcase name="testGet_Username_Student()" classname="testClass" time="0.021"/>
+  <testcase name="testGet_Username_Lecturer()" classname="testClass" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
