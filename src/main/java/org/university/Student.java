@@ -6,10 +6,12 @@ public class Student {
     private String Name;
     private int Age;
     private DateTime DOB;
-    private long ID;
+    private final long ID;
     private String username;
-    private ArrayList<Course> courses;
-    private ArrayList<Module> modules;
+    private ArrayList<Course> courses = new ArrayList<>();
+    private ArrayList<Module> modules = new ArrayList<>();
+
+
 
     public Student(String name, int age, DateTime DOB, long ID){
         this.Name = name;
@@ -45,10 +47,6 @@ public class Student {
         return ID;
     }
 
-    public void setID(long ID) {
-        this.ID = ID;
-    }
-
     public String getUsername(){
         this.username = this.Name+this.Age;
         return username;
@@ -57,18 +55,11 @@ public class Student {
     public ArrayList<Course> getCourses() {
         return courses;
     }
-
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
-    }
-
+    public void addCourse(Course course){this.courses.add(course);}
     public ArrayList<Module> getModules() {
         return modules;
     }
-
-    public void setModules(ArrayList<Module> modules) {
-        this.modules = modules;
-    }
+    public void addModule(Module module){this.modules.add(module);}
 
     @Override
     public String toString() {

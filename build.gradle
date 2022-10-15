@@ -25,7 +25,3 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 }
-
-dependencies {
-    implementation 'com.github.BobbyMartins:SoftEngIII:v1.0.0'
-}

@@ -4,40 +4,27 @@ import java.util.ArrayList;
 public class Lecturer {
     private String name;
     private int age;
-    private int ID;
+    private final long ID;
     private String username;
-    private ArrayList<Course> courses;
-    private ArrayList<Module> modules;
+    private ArrayList<Course> courses = new ArrayList<>();
+    private ArrayList<Module> modules = new ArrayList<>();
 
-    public Lecturer(String name, int age, int ID) {
+
+    public Lecturer(String name, int age, long ID) {
         this.name = name;
         this.age = age;
         this.ID = ID;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
 
-    public int getAge() {
-        return age;
-    }
+    public int getAge() { return age; }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    public void setAge(int age) { this.age = age; }
 
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
+    public long getID() { return ID; }
 
     public String getUsername() {
         this.username = this.name+this.age;
@@ -52,9 +39,7 @@ public class Lecturer {
         this.courses = courses;
     }
 
-    public void addCourse(Course course){
-        this.courses.add(course);
-    }
+    public void addCourse(Course course){this.courses.add(course); }
 
     public ArrayList<Module> getModules() {
         return modules;
@@ -62,10 +47,14 @@ public class Lecturer {
 
     public void setModules(ArrayList<Module> modules) {
         this.modules = modules;
+        for (Module module : modules){
+            module.setLecturer(this);
+        }
     }
 
     public void addModules(Module module){
         this.modules.add(module);
+        module.setLecturer(this);
     }
 
     @Override
