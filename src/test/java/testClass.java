@@ -31,7 +31,7 @@ public class testClass {
     String lecName = "Michael";
     int age2 = 46;
     String username2 = lecName+age2;
-    Lecturer testLecturer = new Lecturer(lecName, age2, 123445);
+    Lecturer testLecturer = new Lecturer(lecName, age2, DateTime.parse("1978-02-21") , 123445);
     @Test
     public void testLecturer(){
         ArrayList<Module> modList = new ArrayList<>();
