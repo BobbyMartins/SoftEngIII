@@ -71,13 +71,21 @@ public class Lecturer {
 
     @Override
     public String toString() {
+        String ret_courses = "";
+        String ret_modules = "";
+        for (Course course: courses){
+            ret_courses += course.rep();
+        }
+        for (Module module: modules){
+            ret_modules += module.rep();
+        }
         return "Lecturer{" +
                 "name='" + name + '\n' +
                 "   age=" + age + '\n' +
                 "   ID=" + ID + '\n' +
                 "   username='" + username + '\n' +
-                "   courses=" + courses + '\n' +
-                "   modules=" + modules + '\n' +
+                "   courses=" + ret_courses + '\n' +
+                "   modules=" + ret_modules + '\n' +
                 '}' + '\n';
     }
 }

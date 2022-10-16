@@ -58,19 +58,54 @@ public class Course {
 
     public void setModules(ArrayList<Module> modules) {
         this.modules = modules;
+        for (Module module: modules){
+            if (!module.getAssociated_courses().contains(this)){
+                module.addCourse(this);
+            }
+        }
     }
 
     public void addModules(Module module){
         this.modules.add(module);
+        if (!module.getAssociated_courses().contains(this)){
+            module.addCourse(this);
+        }
     }
 
     @Override
     public String toString() {
+        String ret_students = "";
+        String ret_modules = "";
+        for (Student student : students){
+            ret_students += student.rep();
+        }
+        for (Module module: modules){
+            ret_modules += module.rep();
+        }
         return "Course { \n" +
                 "   name='" + code + '\n' +
-                "   students=" + students + '\n' +
+                "   students=" + ret_students + '\n' +
+                "   modules=" + ret_modules + '\n' +
                 "   start_date=" + start_date + '\n' +
                 "   end_date=" + end_date + '\n' +
                 '}' + '\n';
+    }
+
+    public String rep(){
+        String ret_modules = "";
+        String ret_students = "";
+        for (Module module: modules){
+            ret_modules += module.rep();
+        }
+        for (Student student : students){
+            ret_students += student.rep();
+        }
+        String ret = "";
+        ret += String.format("\nCourse code: %s \n", this.code);
+        ret += String.format("Modules in this course: %d \n", ret_modules);
+        ret += String.format("Students in this course: %s \n", ret_students);
+        ret += String.format("Academic start date: %d \n", this.start_date);
+        ret += String.format("Academic end date: %s \n", this.end_date);
+        return ret;
     }
 }

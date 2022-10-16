@@ -63,15 +63,34 @@ public class Student {
 
     @Override
     public String toString() {
-        String ret = "";
+        String ret_courses = "";
+        String ret_modules = "";
+        for (Course course: courses){
+            ret_courses += course.rep(); //TODO replace with rep()
+        }
+        for (Module module: modules){
+            ret_modules += module.rep();
+        }
+        String ret = "\n";
         ret += String.format("Student name: %s \n", this.Name);
         ret += String.format("Student age: %d \n", this.Age);
         ret += String.format("Student DOB: %s \n", this.DOB);
         ret += String.format("Student ID: %d \n", this.ID);
         ret += String.format("Student Username: %s \n", getUsername());
-        ret += String.format("Student Courses: %s \n", this.courses);
-        ret += String.format("Student Modules: %s \n", this.modules );
+        ret += String.format("Student Courses: %s \n", ret_courses);
+        ret += String.format("Student Modules: %s \n", ret_modules);
 
+        return ret;
+    }
+
+    //function to return string representation of student from different classes to prevent StackOverflowError
+    public String rep(){
+        String ret = "";
+        ret += String.format("\n\tStudent name: %s \n", this.Name);
+        ret += String.format("\tStudent age: %d \n", this.Age);
+        ret += String.format("\tStudent DOB: %s \n", this.DOB);
+        ret += String.format("\tStudent ID: %d \n", this.ID);
+        ret += String.format("\tStudent Username: %s \n", getUsername());
         return ret;
     }
 }

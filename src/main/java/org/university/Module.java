@@ -79,12 +79,33 @@ public class Module {
 
     @Override
     public String toString() {
+        String ret_students = "";
+        String ret_courses = "";
+        for (Student student : students){
+            ret_students += student.rep();
+        }
+        for (Course course: associated_courses){
+            ret_courses += course.rep();
+        }
         return "Module{ \n" +
                 "   code='" + code + '\n' +
                 "   name='" + name + '\n' +
-                "   students=" + students + '\n' +
-                "   associated_courses=" + associated_courses + '\n'+
-                "   lecturer=" + lecturer + '\n' +
+                "   students=" + ret_students + '\n' +
+                "   associated_courses=" + ret_courses + '\n'+
+                "   lecturer=" + lecturer.getName() + '\n' +
                 '}' + '\n';
+    }
+
+    public String rep(){
+        String ret_students = "";
+        for (Student student : students){
+            ret_students += "\t\t" + student.rep();
+        }
+        String ret = "";
+        ret += String.format("\n\tModule name: %s \n", this.name);
+        ret += String.format("\tModule ID: %s \n", this.code);
+        ret += String.format("\tStudents in this module: %s \n", ret_students);
+        ret += String.format("\tLecturer responsible for module: %s \n", lecturer.getName());
+        return ret;
     }
 }

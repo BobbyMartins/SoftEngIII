@@ -61,9 +61,6 @@ public class testClass {
         testCourse = new Course("DS232", DateTime.parse("2019-06-21"), DateTime.parse("2024-08-21"));
         testCourse.addStudent(testStudent);
         assert testStudent.getCourses().contains(testCourse);
+        System.out.println(testStudent);
     }
-
-
-
-    // TODO add test for addStudent() method in student
 }
