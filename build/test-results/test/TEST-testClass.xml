@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testClass" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-10-15T17:38:26" hostname="DESKTOP-10P96BM" time="0.026">
+<testsuite name="testClass" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-10-16T17:23:10" hostname="DESKTOP-10P96BM" time="0.029">
   <properties/>
-  <testcase name="testLecturer()" classname="testClass" time="0.018"/>
-  <testcase name="testCourse()" classname="testClass" time="0.001"/>
-  <testcase name="testModule()" classname="testClass" time="0.003"/>
-  <testcase name="testStudent()" classname="testClass" time="0.001"/>
-  <system-out><![CDATA[23454
+  <testcase name="testLecturer()" classname="testClass" time="0.019"/>
+  <testcase name="testCourse()" classname="testClass" time="0.004"/>
+  <testcase name="testModule()" classname="testClass" time="0.001"/>
+  <testcase name="testStudent()" classname="testClass" time="0.0"/>
+  <system-out><![CDATA[
+Student name: Bobby 
+Student age: 23 
+Student DOB: 2002-02-28T00:00:00.000Z 
+Student ID: 1234 
+Student Username: Bobby23 
+Student Courses: 
+Course code: DS232 
+Modules in this course:  
+Students in this course: 
+	Student name: Bobby 
+	Student age: 23 
+	Student DOB: 2002-02-28T00:00:00.000Z 
+	Student ID: 1234 
+	Student Username: Bobby23 
+ 
+Academic start date: 2019-06-21T00:00:00.000+01:00 
+Academic end date: 2024-08-21T00:00:00.000+01:00 
+ 
+Student Modules:  
+
+23454
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -102,9 +102,9 @@ public class Course {
         }
         String ret = "";
         ret += String.format("\nCourse code: %s \n", this.code);
-        ret += String.format("Modules in this course: %d \n", ret_modules);
+        ret += String.format("Modules in this course: %s \n", ret_modules);
         ret += String.format("Students in this course: %s \n", ret_students);
-        ret += String.format("Academic start date: %d \n", this.start_date);
+        ret += String.format("Academic start date: %s \n", this.start_date);
         ret += String.format("Academic end date: %s \n", this.end_date);
         return ret;
     }
